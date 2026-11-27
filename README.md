@@ -1,9 +1,13 @@
+**Language / Sprache:** **Deutsch** | [English](README.en.md)
+
+---
+
 # COHI-Player-ESP32
 
 Cohiradia-WAV-Dateien von der **SD-Karte** mit einem ESP32-P4 ( Rev 3.x, 400 MHz)
 direkt als HF-Signal über **PARLIO** ausgeben. 
-Ein ESP32-P4 Board als kompletter Player, ähnlich der bekannten MP3-Mini-Player, nur für ein komplette
-Rundfunkband (Langwelle, Mittelwelle, Kurzwelle).
+Ein ESP32-P4 Board als kompletter Player, ähnlich der bekannten MP3-Mini-Player, nur für komplette
+Rundfunkbänder (Langwelle, Mittelwelle, Kurzwelle).
 
 ![main](/images/main.jpg)
 
