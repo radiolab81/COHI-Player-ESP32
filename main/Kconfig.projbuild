@@ -1,0 +1,32 @@
+menu "COHI-Player"
+
+    config COHI_AUTOPLAY
+        bool "Autoplay beim Einschalten"
+        default y
+        help
+            Findet die Firmware nach dem Start auf der SD-Karte die unten genannte Playlist,
+            wird sie ohne Konsolenaktion abgespielt (Endlosschleife, ausser die Playlist enthaelt
+            die Direktive "#COHI once"). Ein Tastendruck im Abbruchfenster verhindert den Start.
+
+    config COHI_AUTOPLAY_FILE
+        string "Name der Autoplay-Playlist (Wurzel der SD-Karte)"
+        default "/autoplay.m3u"
+        depends on COHI_AUTOPLAY
+
+    config COHI_AUTOPLAY_DELAY_S
+        int "Abbruchfenster vor dem Autostart in Sekunden (0 = sofort)"
+        range 0 30
+        default 3
+        depends on COHI_AUTOPLAY
+        help
+            Beim Oeffnen eines Terminals setzt die USB-UART-Bruecke das Board meist zurueck.
+            In diesem Fenster genuegt eine beliebige Taste, damit der Autoplay nicht anlaeuft.
+
+    config COHI_DEFAULT_OFFSET_BINARY
+        bool "Standard: Offset-Binary-DAC (Stille = Mittencode 0x80 / 0x8000)"
+        default n
+        help
+            Bestimmt den Pegel der Datenpins ab dem Einschalten (noch vor dem Lesen der SD-Karte)
+            und den Startwert von "offset". Die Playlist-Direktive "#COHI offset=on|off" ueberschreibt ihn.
+
+endmenu

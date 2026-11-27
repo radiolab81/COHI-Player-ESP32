@@ -1,0 +1,11 @@
+#EXTM3U
+# Beispiel fuer die Autoplay-Playlist: auf die SD-Karte ins Wurzelverzeichnis als "autoplay.m3u" kopieren.
+# Einstellungen (wirken wie die gleichnamigen Konsolenbefehle; Rangfolge: Firmware-Standard < Playlist < Konsole):
+#COHI width=8 offset=on gain=auto maxrate=10 cores=auto
+# Nur ein Durchlauf statt Endlosschleife? Dann die naechste Zeile einkommentieren (als "#COHI once"):
+# #COHI once
+
+# Eine Datei pro Zeile. "/" = Wurzel der SD-Karte, ohne fuehrenden "/" relativ zum Ordner der Playlist.
+# Hat eine Datei im auxi-Chunk eine Folgedatei, wird zuerst die ganze Kette gespielt, dann der naechste Eintrag.
+/Ordner1/AM1_1250kHz_1_20240512_100854_1250kHz.wav
+/Ordner1/Helissandur_rs_20240220_195714Z_198kHz_0.wav
